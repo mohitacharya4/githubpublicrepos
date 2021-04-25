@@ -1,0 +1,9 @@
+<div class="card mx-2 my-2" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title"><a class="card-link" [href]="repositoryDetail.url" target="_blank" rel="noopener noreferrer">{{repositoryDetail.name}}</a></h5>
+        <h6 class="card-subtitle mb-2 text-muted"><b>Language: </b>{{!repositoryDetail.language ? 'None' : repositoryDetail.language}}</h6>
+        <p class="card-text"><b>Size (in KB): </b>{{repositoryDetail.size}}</p>
+        <p class="card-text"><b>Watchers count: </b>{{repositoryDetail.watchers_count}}</p>
+        <p class="card-text"><b>Star Count: </b>{{repositoryDetail.stargazers_count}}</p>
+    </div>
+</div>

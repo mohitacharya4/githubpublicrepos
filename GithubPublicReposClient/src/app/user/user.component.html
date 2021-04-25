@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="form-group">
+        <form #userDetails="ngForm" (ngSubmit)="getUserRepos(userDetails)">
+            <label for="name">Github Username</label>
+            <input class="form-control" ngModel name="username" id="name" type="text" class="mx-4 my-4"
+                placeholder="username">
+            <button [disabled]="userDetails.value.username === ''" type="submit">
+                Get user repos
+                <span *ngIf="loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            </button>
+        </form>
+    </div>
+    <div class="row">
+        <app-repository *ngFor="let repository of repositoryDetails" [repositoryDetail]="repository"></app-repository>
+    </div>
+</div>
